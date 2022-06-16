@@ -6,6 +6,7 @@
  * @line_num: number of the line
  * Return: Nothing.
  */
+
 void _push(stack_t **stack, unsigned int line_num)
 {
 	char *value = strtok(NULL, DELIMITERS);
@@ -27,8 +28,8 @@ void _push(stack_t **stack, unsigned int line_num)
 	new_node->n = n;
 	new_node->next = (*stack);
 	new_node->prev = NULL;
-
 	if (*stack)
 		(*stack)->prev = new_node;
+
 	*stack = new_node;
 }
